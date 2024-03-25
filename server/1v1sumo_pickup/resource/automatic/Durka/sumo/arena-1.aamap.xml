@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Resource SYSTEM "AATeam/map-0.2.8.0.dtd">
+<Resource type="aamap" name="arena" version="1" author="Durka" category="sumo">
+	<Map version="2">
+		<!-- Durka converted the original sumo map (by Z-Man) into a 1 vs 1 sumo arena -->
+
+		<Settings>
+			<Setting name="MAP_FILE_OVERRIDE" value="0" />
+			<Setting name="FORTRESS_MAX_PER_TEAM" value="1" />
+			<Setting name="SPAWN_POINT_GROUP_SIZE" value="4" />
+		</Settings>
+
+		<World>
+			<Field>
+				<Spawn	x="130"	y="120"	xdir="0"	ydir="-1"	/>
+				<Spawn	x="70"	y="80"	xdir="0"	ydir="1"	/>
+				<Wall>
+					<Point	x="0"	y="0"	/>
+					<Point	x="0"	y="200"	/>
+					<Point	x="200"	y="200"	/>
+					<Point	x="200"	y="0"	/>
+					<Point	x="0"	y="0"	/>
+				</Wall>
+
+				<Zone effect="fortress">
+					<ShapeCircle radius="40" growth="-0.4">
+						<Point x="100" y="100" />
+					</ShapeCircle>
+				</Zone>
+
+				<Zone effect="fortress">
+					<ShapeCircle radius="40" growth="-0.4">
+						<Point x="100" y="100" />
+					</ShapeCircle>
+				</Zone>
+			</Field>
+		</World>
+	</Map>
+</Resource>

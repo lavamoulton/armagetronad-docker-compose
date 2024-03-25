@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Resource SYSTEM "AATeam/map-0.2.8.0_rc4.dtd">
+<Resource type="aamap" name="public" version="1" author="Titanoboa" category="tst">
+<Map version="2">
+<!--
+ The original square map, technically created by z-man.
+		     Converted to XML by philippeqc.
+		     Turned into a fortress sumo (two players fight for the same space) map by z-man.
+		     Bundled with TST settings from Durka by epsy.
+		     Updated for 2020 tournament play and centred around [60;60] by Titanoboa.
+		     Modified for public/casual play by Titanoboa. 
+
+             It's intended for one on one fortress attack and defense training.
+             Make sure that the fortress conquest settings are so that one attacker can't
+             take the zone against one defender.
+		 
+		 To make this compatible with old clients, you need to set WIN_ZONE_INITIAL_SIZE to
+		 40 * exp(ln(2) * SIZE_FACTOR/2) (that's 40 for SIZE_FACTOR=0)
+		 and WIN_ZONE_EXPANSION to -WIN_ZONE_INITIAL_SIZE/100.
+		 For compatibility with 0.2.8_beta1/2, you need to copy the
+		 map over square-1.0.1.aamap.xml instead of changing MAP_FILE.
+
+		 License: Do with it what you want.
+
+	     <Setting name="TEAMS_MIN" value="2" />
+         <Setting name="SP_TEAMS_MIN" value="2" />
+
+-->
+
+<World>
+	<Field>
+		<Spawn x="90" y="80" xdir="0" ydir="-1"/>
+		<Spawn x="40" y="90" xdir="1" ydir="0"/>
+		<Spawn x="80" y="30" xdir="-1" ydir="0"/>
+		<Spawn x="30" y="40" xdir="0" ydir="1"/>
+	<Wall>
+		<Point x="-90" y="-90"/>
+		<Point x="-90" y="210"/>
+		<Point x="210" y="210"/>
+		<Point x="210" y="-90"/>
+		<Point x="-90" y="-90"/>
+	</Wall>
+	<Zone effect="fortress">
+		<ShapeCircle radius="50" growth="-0.5">
+			<Point x="60" y="60"/>
+		</ShapeCircle>
+	</Zone>
+	<Zone effect="fortress">
+		<ShapeCircle radius="50" growth="-0.5">
+			<Point x="60" y="60"/>
+		</ShapeCircle>
+	</Zone>
+	<Zone effect="fortress">
+		<ShapeCircle radius="50" growth="-0.5">
+			<Point x="60" y="60"/>
+		</ShapeCircle>
+	</Zone>
+	<Zone effect="fortress">
+		<ShapeCircle radius="50" growth="-0.5">
+			<Point x="60" y="60"/>
+		</ShapeCircle>
+	</Zone>
+<!--
+ 
+			<Zone effect="win">
+				<ShapeCircle radius="40" growth="-0.4">
+					<Point x="100" y="100" />
+				</ShapeCircle>
+			</Zone>
+            
+-->
+	</Field>
+</World>
+</Map>
+</Resource>

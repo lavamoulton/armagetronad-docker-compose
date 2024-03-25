@@ -1,0 +1,54 @@
+<!DOCTYPE Resource SYSTEM "AATeam/map-0.2.8.0.dtd">
+<Resource type="aamap" name="modern" version="2.2" author="Titanoboa" category="warsumo">
+<Map version="1">
+		
+		<Settings>
+			<Setting name="FORTRESS_MAX_PER_TEAM" value="1" />
+			<Setting name="SPAWN_WINGMEN_SIDE" value="35" />
+			<Setting name="SPAWN_WINGMEN_BACK" value="-55" />
+		</Settings>
+
+		<World>
+			<Field>
+				<Axes number="4"/>
+				<Spawn	x="150.1"	y="120"		xdir="0"	ydir="1"	/>
+				<Spawn	x="149.9"	y="180"		xdir="0"	ydir="-1"	/>
+				<Spawn	x="120"		y="150.1"	xdir="1"	ydir="0"	/>
+				<Spawn	x="180"		y="149.9"	xdir="-1"	ydir="0"	/>
+				
+				<!-- outer wall-->
+				<Wall>
+					<Point x="0" y="0" />			
+					<Point x="0" y="300" />
+					<Point x="300" y="300" />
+					<Point x="300" y="0" />				
+					<Point x="0" y="0" />
+				</Wall>
+				<Zone effect="fortress">
+					<ShapeCircle radius="40" growth="-0.4">
+						<Point x="150" y="150" />
+					</ShapeCircle>
+				</Zone>
+
+				<Zone effect="fortress">
+					<ShapeCircle radius="40" growth="-0.4">
+						<Point x="150" y="150" />
+					</ShapeCircle>
+				</Zone>
+
+				<Zone effect="fortress">
+					<ShapeCircle radius="40" growth="-0.3">
+						<Point x="150" y="150" />
+					</ShapeCircle>
+				</Zone>
+
+				<Zone effect="fortress">
+					<ShapeCircle radius="40" growth="-0.3">
+						<Point x="150" y="150" />
+					</ShapeCircle>
+				</Zone>
+												
+			</Field>
+		</World>
+	</Map>
+</Resource>

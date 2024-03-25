@@ -1,0 +1,46 @@
+<Resource type="aamap" name="4teamfort" version="0.1" author="Desolate" category="fortress">
+    <Map version="1">
+    <!--
+    
+                This is a modified version of Durka's 4 team fortress map with
+                corrections by Z-Man (reuploaded by Deso). The original can be found on the forums here:
+                http://forums3.armagetronad.net/viewtopic.php?f=54&t=7001
+            
+    -->
+        <World>
+            <Field>
+                <Spawn x="255" y="50" xdir="0" ydir="1"/>  
+                <Spawn x="245" y="450" xdir="0" ydir="-1"/>
+                <Spawn x="50" y="245" xdir="1" ydir="0"/>
+                <Spawn x="450" y="255" xdir="-1" ydir="0"/>
+                <Wall>
+                    <Point x="0" y="0"/>
+                    <Point x="0" y="500"/>
+                    <Point x="500" y="500"/>
+                    <Point x="500" y="0"/>
+                    <Point x="0" y="0"/>
+                </Wall>
+                <Zone effect="fortress">
+                    <ShapeCircle radius="40">
+                        <Point x="250" y="50"/>
+                    </ShapeCircle>
+                </Zone>
+                <Zone effect="fortress">
+                    <ShapeCircle radius="40">
+                        <Point x="250" y="450"/>
+                    </ShapeCircle>
+                </Zone>
+                <Zone effect="fortress">
+                    <ShapeCircle radius="40">
+                        <Point y="250" x="50"/>
+                    </ShapeCircle>
+                </Zone>
+                <Zone effect="fortress">
+                    <ShapeCircle radius="40">
+                        <Point y="250" x="450"/>
+                    </ShapeCircle>
+                </Zone>
+            </Field>
+        </World>
+    </Map>
+</Resource>

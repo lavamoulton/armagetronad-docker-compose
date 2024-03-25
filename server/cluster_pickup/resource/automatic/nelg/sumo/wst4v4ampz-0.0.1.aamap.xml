@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Resource SYSTEM "Lover-Boy/map-0.2.9_styctap_v1.5.dtd">
+<Resource type="aamap" name="wst4v4ampz" version="0.0.1" author="nelg" category="sumo">
+<!--
+This is modified from vov's wst* 4v4 maps to use ampz's suggested spawnpoints.
+
+Requires sty+ct+ap to properly place the spawns.
+Recommend setting spawn_point_group_size 1 or the order might be a bit scrambled,
+and size_factor 0 or the spawns will be spaced wrong for standard sumo physics.
+-->
+<Map version="0.2.8">
+<World>
+	<Field>
+		<Spawn     x="36" y="0" xdir="0" ydir="-1">
+			<Spawn x="-36" y="0" xdir="0" ydir="1"/>
+			<Spawn x="38.75362" y="2.2028999999999836" xdir="0" ydir="-1"/>
+			<Spawn x="-38.75362" y="-2.2029000000000067" xdir="0" ydir="1"/>
+		</Spawn>
+
+		<Spawn     x="0" y="36" xdir="1" ydir="0">
+			<Spawn x="0" y="-36" xdir="-1" ydir="0"/>
+			<Spawn x="-2.2029000000000067" y="38.75362" xdir="1" ydir="0"/>
+			<Spawn x="2.2028999999999694" y="-38.75362" xdir="-1" ydir="0"/>
+		</Spawn>
+
+		<Wall>
+			<Point x="-125" y="-125"/>
+			<Point x="-125" y="125"/>
+			<Point x="125" y="125"/>
+			<Point x="125" y="-125"/>
+			<Point x="-125" y="-125"/>
+		</Wall>
+
+
+		<Zone effect="fortress">
+			<ShapeCircle radius="60" growth="-0.5">
+				<Point x="0" y="0"/>
+			</ShapeCircle>
+		</Zone>
+
+		<Zone effect="fortress">
+			<ShapeCircle radius="60" growth="-0.5">
+				<Point x="0" y="0"/>
+			</ShapeCircle>
+		</Zone>
+
+	</Field>
+</World>
+</Map>
+</Resource>
