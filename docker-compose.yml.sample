@@ -1,0 +1,17 @@
+services:
+  fort_pickup:
+    image: codefossa/armagetronad:latest
+    # setting a container name means it must be unique, this is optional
+    container_name: fort_pickup
+    environment:
+      # optional set UID and GID
+      - UID=1000
+      - GID=1000
+    volumes:
+    # points to your server settings, copy a server to a new folder and adjust the settings to create a new server
+    - ./server/wst_pickup:/app/server/server
+    ports:
+    # use ports 4534-4544, make sure to include /udp or server will not connect to network correctly
+    - "4534:4534/udp"
+    command: ./start.sh
+    restart: unless-stopped
