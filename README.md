@@ -14,3 +14,7 @@ Setup multiple armagetron servers easily using the [armagetronad docker image](h
     - Optionally, delete any existing var data
 - Adjust server/<server_name>/settings/server_info.cfg and settings_custom.cfg with your server settings
 - For scripting, put scripts in the scripts/ folder and SPAWN_SCRIPT in script.cfg
+
+## Running the Servers
+- Start all services with docker compose up (add -d to only log to /var/consolelog.txt)
+- Restart / manage individual containers as needed with docker compose commands
